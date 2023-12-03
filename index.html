@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Wise</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+ 
+  <style>
+    /* Add your custom styles here if needed */
+
+    /* Default styles for larger screens */
+    
+#premier-features,
+#features {
+  padding: 5rem 0; /* Adjust the padding as needed for larger screens */
+}
+
+.feature-box {
+  margin-bottom: 2rem; /* Adjust the margin as needed for larger screens */
+}
+
+.feature-box img {
+  max-width: 40%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  #premier-features,
+  #features {
+    padding: 3rem 0; /* Adjust the padding as needed for smaller screens */
+  }
+
+  .feature-box {
+    margin-bottom: 1rem; /* Adjust the margin as needed for smaller screens */
+  }
+}
+
+    #faq-section .faq_area {
+      position: relative;
+      z-index: 1;
+      background-color: #f5f5ff;
+  }
+
+  #faq-section .faq-accordian {
+      position: relative;
+      z-index: 1;
+  }
+
+  #faq-section .faq-accordian .card {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 1.5rem;
+  }
+
+  #faq-section .faq-accordian .card:last-child {
+      margin-bottom: 0;
+  }
+
+  #faq-section .faq-accordian .card .card-header {
+      background-color: #ffffff;
+      padding: 0;
+      border-bottom-color: #ebebeb;
+  }
+
+  #faq-section .faq-accordian .card .card-header h6 {
+      cursor: pointer;
+      padding: 1.75rem 2rem;
+      color: #3f43fd;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -ms-grid-row-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+  }
+
+  #faq-section .faq-accordian .card .card-header h6 span {
+      font-size: 1.5rem;
+  }
+
+  #faq-section .faq-accordian .card .card-header h6.collapsed {
+      color: #070a57;
+  }
+
+  #faq-section .faq-accordian .card .card-header h6.collapsed span {
+      -webkit-transform: rotate(-180deg);
+      transform: rotate(-180deg);
+  }
+
+  #faq-section .faq-accordian .card .card-body {
+      padding: 1.75rem 2rem;
+  }
+
+  #faq-section .faq-accordian .card .card-body p:last-child {
+      margin-bottom: 0;
+  }
+
+  @media only screen and (max-width: 575px) {
+      #faq-section .support-button p {
+          font-size: 14px;
+      }
+  }
+
+  #faq-section .support-button i {
+      color: #1e21ce;
+      font-size: 1.25rem;
+  }
+
+  @media only screen and (max-width: 575px) {
+      #faq-section .support-button i {
+          font-size: 1rem;
+      }
+  }
+
+  #faq-section .support-button a {
+      text-transform: capitalize;
+      color: #2ecc71;
+  }
+
+  @media only screen and (max-width: 575px) {
+      #faq-section .support-button a {
+          font-size: 13px;
+      }
+  }
+
+    .testimonials-section {
+      background-color: #e7d2b3; /* Your desired background color */
+      color: white; /* Text color */
+      padding: 40px 0; /* Adjust the padding as needed */
+    }
+
+    .testimonials-container {
+      padding: 20px;
+    }
+
+    .testimonial-box {
+      text-align: center;
+    }
+
+    .testimonial-box img {
+      height: 100px; /* Adjust the height to your preferred size */
+      width: 20px;  /* Maintain the aspect ratio */
+      border-radius: 100%; /* Creates a circular shape for the image, adjust as needed */
+      object-fit: scale-down; /* Ensures the image covers the container without stretching */
+  }
+  .fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .fade-in-active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  body {
+    font-family: 'Arial', sans-serif; /* Change the font-family as needed */
+  }
+  
+  #welcome {
+    margin-top: 0px; /* Adjust the margin-top to reduce space */
+  }
+
+  .welcome-box {
+    border-top: 1px solid #ccc; /* Add a single line border */
+    padding-top: 30px; /* Adjust the padding as needed */
+  }
+  .gray-background {
+    background-color: #ccc; /* Gray background color */
+    padding: 8px; /* Adjust padding as needed */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+.welcome-heading,
+        .fade-text,
+        .management-platform {
+            margin-bottom: 20px; /* Adjust the value as needed */
+        }
+
+        /* Additional styling for other elements */
+        .welcome-heading {
+            font-size: 18px;
+        }
+
+        .fade-text {
+            font-size: 40px;
+        }
+        .fade-in {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+  #faq-section,
+  #pricing,
+  #testimonials {
+    margin-top: 10px; /* Adjust the margin-top to ensure proper alignment with the fixed header */
+  }
+
+  /* Add smooth transition between sections */
+  section {
+    scroll-margin-top: 60px; /* Adjust scroll margin to account for fixed header */
+    transition: background-color #fdf3ed 0.5s ease-in-out;
+  }
+
+  .orange-bg {
+    background-color: #f99e15; /* Light orange background color */
+    color: #fff; /* White text color for better readability */
+  }
+
+  .light-white-bg {
+    background-color: #f5f5f5; /* Light white background color for testimonials */
+    color: #333; /* Dark text color for better readability */
+  }
+
+  .owl-carousel {
+    margin-top: 30px; /* Adjust margin-top for testimonials carousel */
+  }
+  .custom-bg-color {
+    background-color: #fdf3ed;
+    /* Add any other styles as needed */
+  }
+  .fade-text {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 1em;
+}
+.feature-box {
+  margin-bottom: 20px;
+}
+
+.feature-box p:first-child {
+  font-weight: bold;
+  font-size: 25px; /* Adjust the font size for the first line */
+  margin-bottom: 15px; /* Add some space between the lines */
+}
+
+.feature-box p:last-child {
+  font-size: 16px; /* Adjust the font size for the second line */
+  margin-bottom: 10px; /* Remove default margin to minimize space */
+}
+
+.fade-text::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10em;
+    bottom: 0;
+    left: 0;
+    background-color: orange;
+    z-index: -1;
+}
+
+.fade-text span {
+    position: relative;
+    z-index: 1;
+    color: #de0d0d; /* Original text color */
+}
+    /* Rest of the existing styles */
+  </style>
+  
+</head>
+<body>
+  
+
+<!-- Header Section -->
+<header class="header custom-bg-color py-3  ">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div>
+      <img src="header.png" alt="Logo" class="img-fluid" style="max-height: 50px;">
+    </div>
+    <div class="d-none d-md-flex">
+      <button class="btn btn-light mx-2" data-target="#welcome">Welcome</button>
+      <button class="btn btn-light mx-2" data-target="#premier-features">Premier Features</button>
+      <button class="btn btn-light mx-2" data-target="#features">Features</button>
+      <button class="btn btn-light mx-2" data-target="#faq-section">FAQ</button>
+      <button class="btn btn-light mx-2" data-target="#pricing">Pricing</button>
+      <button class="btn btn-light mx-2" data-target="#testimonials">Testimonials</button>
+    </div>
+    <div class="d-md-none">
+      <button class="btn btn-dark" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="collapse" id="navbarCollapse">
+  <div class="bg-dark text-light p-3">
+    <button class="btn btn-light d-block my-2" data-target="#welcome">Welcome</button>
+    <button class="btn btn-light d-block my-2" data-target="#premier-features">Premier Features</button>
+    <button class="btn btn-light d-block my-2" data-target="#features">Features</button>
+    <button class="btn btn-light d-block my-2" data-target="#faq-section">FAQ</button>
+    <button class="btn btn-light d-block my-2" data-target="#pricing">Pricing</button>
+    <button class="btn btn-light d-block my-2" data-target="#testimonials">Testimonials</button>
+  </div>
+</div>
+
+
+  <!-- Welcome Section -->
+  <!-- Welcome Section -->
+<!-- Welcome Section -->
+
+<section id="welcome" class="welcome text-center py-5 custom-bg-color">
+  <div class="container">
+    <div class="welcome-box">
+      <h5 class="welcome-heading font-weight-bold">Welcome to <span class="manage-wise">ManageWise</span></h5>
+      <h1 class="fade-text font-weight-bold">Empower your business with <span>Strategic</span> insights</h1>
+      <h5 class="welcome-heading management-platform">Powerful management platform to streamline your business operations, boost productivity, and drive success</h5>      
+    </div>
+    <button class="btn btn-success font-weight-bold">Get Started</button>
+    <button class="btn btn-primary font-weight-bold">Watch Demo</button>
+    <p> 
+
+
+    </p>
+    <img src="image1.jpg" alt="Image 1" class="img-fluid" style="max-width: 70%; height: auto;">
+  </div>
+</section>
+
+<!-- Premier Features Section -->
+  <section id="premier-features" class="premier-features text-center py-5">
+    <div class="container">
+      <h1>Discover our product's capabilities</h1>
+      <h3>  Don't settle for mediocrity - embrace the future of management with Manage Wise.</h3>
+      <p>Boost productivity and streamline workflow with us. Enjoy our intuitive interface and robust features.</p>
+      <div class="feature-box">
+        
+        <img src="feature1.png" alt="Feature 1 Image">
+      </div>
+      <div class="feature-box ">
+        <p>
+          Smart Task Management</p>
+        <p>Say goodbye to chaos with our smart task management system.</p>
+        <img src="feature2.png" alt="Feature 2 Image">
+      </div>
+      <div class="feature-box">
+        <p>Flexible Scheduling</p>
+        <p>Stay productive with our flexible scheduling system.</p>
+        <img src="feature6.png" alt="Feature 2 Image">
+      </div>
+      <div class="feature-box">
+        <p>Easy Communication</p>
+        <p>Collaborate seamlessly with your team in real-time.</p>
+        <img src="feature3.png" alt="Feature 2 Image">
+      </div>
+      <div class="feature-box">
+        <p>Analytics</p>
+        <p>Gain valuable insights with our advanced analytics feature. 🤩</p>
+        <img src="feature4.png" alt="Feature 2 Image">
+      </div>
+        
+        
+    </div>
+  </section>
+
+  
+<!-- Features Section -->
+<section id="features" class="features-section text-center py-5" style="background-color: #333; color: #fff;">
+  <div class="container">
+    <h1>AND MORE...</h1>
+    <p>Explore an array of features that elevate your Productivity to new heights</p>
+    <p>Discover the tools that will revolutionize the way you manage and optimize your operations</p>
+    
+    <div class="feature-box">
+      <img src="image4.png" alt="Feature Icon 1">
+      <p><strong>Cross-Platform Compatibility</strong></p>
+      <p>Enjoy the flexibility of cross-platform compatibility. Our product works seamlessly across desktop, web, and mobile devices, allowing you to work from your preferred device.</p>
+    </div>
+
+    <div class="feature-box">
+      <img src="icon2.png" alt="Feature Icon 2">
+      <p><strong>Stay Informed with Essential Notifications</strong></p>
+      <p>Automate support from first customer contact to closing the ticket. Drastically improve time to resolution.</p>
+    </div>
+
+    <div class="feature-box">
+      <img src="icon3.png" alt="Feature Icon 3">
+      <p><strong>Secure Data Encryption at all times</strong></p>
+      <p>Trust in our robust data encryption to keep your sensitive information safe and secure. Rest easy knowing your data is protected at all times.</p>
+      <p><strong>🛠 INTEGRATIONS</strong></p>
+      <img src="icon3.png" alt="Feature Icon 3">
+      <p>Enable integration with other popular tools and platforms. Seamlessly connect and amplify your workflow by enabling integration with a diverse array of widely-used tools and platforms.</p>
+      <img src="feature5.png" alt="Feature Icon 3">
+    </div>
+
+  </div>
+</section>
+
+
+<div id="faq-section">
+  <div class="faq_area section_padding_130 custom-bg-color" id="faq">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-8 col-lg-6">
+                <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s"
+                    style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    <h3><span>Frequently </span> Asked Questions</h3>
+                    <p>Need 
+                      Answers?
+                      Check out our most commonly asked questions below to find the information you need.</p>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!-- FAQ Area-->
+            <div class="col-12 col-sm-10 col-lg-8">
+                <div class="accordion faq-accordian" id="faqAccordion">
+                    <!-- FAQ Item 1 -->
+                    <div class="card border-0 wow fadeInUp" data-wow-delay="0.2s"
+                        style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                        <div class="card-header" id="headingOne">
+                            <h6 class="mb-0">
+                                <button class="accordion-button" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How can I install this app?<span class="lni-chevron-up"></span>
+                                </button>
+                            </h6>
+                        </div>
+                        <div class="collapse show" id="collapseOne" aria-labelledby="headingOne"
+                            data-parent="#faqAccordion">
+                            <div class="card-body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quidem facere
+                                    deserunt sint animi sapiente vitae suscipit.</p>
+                                <p>Appland is completely creative, lightweight, clean &amp; super responsive app
+                                    landing page.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="card border-0 wow fadeInUp" data-wow-delay="0.3s"
+                        style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                        <div class="card-header" id="headingTwo">
+                            <h6 class="mb-0">
+                                <button class="accordion-button collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    The app isn't installing?<span class="lni-chevron-up"></span>
+                                </button>
+                            </h6>
+                        </div>
+                        <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo"
+                            data-parent="#faqAccordion">
+                            <div class="card-body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quidem facere
+                                    deserunt sint animi sapiente vitae suscipit.</p>
+                                <p>Appland is completely creative, lightweight, clean &amp; super responsive app
+                                    landing page.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="card border-0 wow fadeInUp" data-wow-delay="0.4s"
+                        style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                        <div class="card-header" id="headingThree">
+                            <h6 class="mb-0">
+                                <button class="accordion-button collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    Contact form isn't working?<span class="lni-chevron-up"></span>
+                                </button>
+                            </h6>
+                        </div>
+                        <div class="collapse" id="collapseThree" aria-labelledby="headingThree"
+                            data-parent="#faqAccordion">
+                            <div class="card-body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quidem facere
+                                    deserunt sint animi sapiente vitae suscipit.</p>
+                                <p>Appland is completely creative, lightweight, clean &amp; super responsive app
+                                    landing page.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Support Button-->
+                <div class="support-button text-center d-flex align-items-center justify-content-center mt-4 wow fadeInUp"
+                    data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                    <i class="lni-emoji-sad"></i>
+                    <p class="mb-0 px-2">Can't find your answers?</p>
+                    <a href="#"> Contact us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+  
+
+  <!-- Pricing Section -->
+<!-- Pricing Section -->
+<section id="pricing" class="pricing-section text-center py-5" style="background-color: #e0ae62; color: #151411;">
+  <div class="container">
+    <h1 class="fade-text font-weight-bold">Subscription</h1>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="pricing-box rounded p-3" style="background-color: #333;">
+          <h3>FREE</h3>
+          <p>$0 / month</p>
+          <p>Access to all basic features</p>
+          <p>Reporting and analytics</p>
+          <p>Up to 5 individual users</p>
+          <p>Chat and email support</p>
+          <button class="btn btn-success">Get Started</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="pricing-box rounded p-3" style="background-color: #555;">
+          <h3>STANDARD</h3>
+          <p>$25 / month</p>
+          <p>Access to all basic features</p>
+          <p>Reporting and analytics</p>
+          <p>Up to 10 individual users</p>
+          <p>Chat and email support</p>
+          <button class="btn btn-success">Get Started</button>
+          <!-- Repeat similar structure for standard plan details -->
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="pricing-box rounded p-3" style="background-color: #777;">
+          <h3>BUSINESS</h3>
+          <p>$42 / month</p>
+          <p>Access to all basic features</p>
+          <p>Reporting and analytics</p>
+          <p>Unlimited users</p>
+          <p>Priority chat and email support</p>
+          <button class="btn btn-success">Get Started</button>
+          <!-- Repeat similar structure for business plan details -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id = "testimonials" class="testimonials-section">
+  <div class="testimonials-container owl-carousel owl-theme">
+    <!-- Repeat similar structure for 5 testimonials -->
+    <div class="testimonial-box">
+      <img src="icon.jpg" alt="Human Icon">
+      <p>"The customer support team behind this product is exceptional. They have been incredibly responsive and helpful, addressing any questions or concerns promptly."</p>
+      <p>  Sarah
+        Project Manager</p>
+    </div>
+    <div class="testimonial-box">
+      <img src="icon.jpg" alt="Human Icon">
+      <p>"The customer support team behind this product is exceptional. They have been incredibly responsive and helpful, addressing any questions or concerns promptly.Manage Wise transformed our team's productivity. The intuitive interface and powerful features have made a significant impact on our daily operations."</p>
+      <p>  Sarah
+        Project Manager</p>
+    </div>
+    <div class="testimonial-box">
+      <img src="icon.jpg" alt="Human Icon">
+      <p>"The customer support team behind this product is exceptional. They have been incredibly responsive and helpful, addressing any questions or concerns promptly.Manage Wise transformed our team's productivity. The intuitive interface and powerful features have made a significant impact on our daily operations"</p>
+      <p>  Sarah
+        Project Manager</p>
+    </div>
+    <div class="testimonial-box">
+      <img src="icon.jpg" alt="Human Icon">
+      <p>"The customer support team behind this product is exceptional. They have been incredibly responsive and helpful, addressing any questions or concerns promptly."</p>
+      <p>  Sarah
+        Project Manager</p>
+    </div>
+    <div class="testimonial-box">
+      <img src="icon.jpg" alt="Human Icon">
+      <p>"The customer support team behind this product is exceptional. They have been incredibly responsive and helpful, addressing any questions or concerns promptly.Manage Wise transformed our team's productivity. The intuitive interface and powerful features have made a significant impact on our daily operations."</p>
+      <p>  Sarah
+        Project Manager</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer Section -->
+  <footer class="footer custom-bg-color text-dark py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>Logo</p>
+          <p>Features</p>
+          <p>FAQ</p>
+          <p>Pricing</p>
+          <p>Testimonials</p>
+        </div>
+        <div class="col-md-6 text-right">
+          <a href="#" class="text-dark mx-2"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-dark mx-2"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-dark mx-2"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="text-dark mx-2"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <p class="text-center mt-3">© 2022 ManageWise, Inc.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('.owl-carousel').owlCarousel({
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: false,
+      items: 1,
+      loop: true,
+      dots: false
+    });
+    window.addEventListener("scroll", function() {
+      const navList = document.querySelector('.nav-list');
+      if (window.scrollY > 200) {
+          navList.style.display = 'block';
+      } else {
+          navList.style.display = 'none';
+      }
+  });
+  document.addEventListener('DOMContentLoaded', function () {
+    const sections = document.querySelectorAll('.fade-in');
+
+    function checkScroll() {
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight * 0.75) {
+          section.classList.add('fade-in-active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    window.addEventListener('resize', checkScroll);
+
+    // Initial check on page load
+    checkScroll();
+  });
+    const headerButtons = document.querySelectorAll('.btn');
+    headerButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const sectionText = button.textContent.toLowerCase();
+        const sectionId = sectionText.replace(/\s+/g, '-'); // Replace spaces with hyphens
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  });
+</script>
+
+
+</body>
+</html>
